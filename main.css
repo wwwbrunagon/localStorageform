@@ -1,6 +1,5 @@
 * {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body {
@@ -12,13 +11,6 @@ body {
 }
 
 .form-crud {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: 10rem;
 }
 /*# sourceMappingURL=main.css.map */

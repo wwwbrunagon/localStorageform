@@ -7,72 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrontEnd Challenge</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,900,900i" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     <div class="hero">
         <img src="./img/hero.png" alt="Imagem ilustrativa metodologia Gustavo Borges">
     </div>
     <div class="form-crud">
-        <div class="form-crud--registration">
-            <table>
-                <tr>
-                    <td>
-                        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                            <div>
-                                <label>Nome Completo*</label><label class="validation-error hide" id="fullNameValidationError">campo obrigatório</label>
-                                <input type="text" name="fullName" id="fullName">
-                            </div>
-                            <div>
-                                <label>CPF</label>
-                                <input type="text" name="cpf" id="cpf">
-                            </div>
-                            <div>
-                                <label>Telefone</label>
-                                <input type="text" name="telefone" id="telefone">
-                            </div>
-                            <div>
-                                <label>Email</label>
-                                <input type="text" name="email" id="email">
-                            </div>
-                            <div>
-                                <label>Gênero</label>
-                                <input type="text" name="email" id="email">
-                            </div>
-                            <div>
-                                <label>Status</label>
-                                <input type="text" name="email" id="email">
-                            </div>
-                            <div>
-                                <label>Data de Nascimento</label>
-                                <input type="text" name="email" id="email">
-                            </div>
-                            <div  class="form-action-buttons">
-                                <input type="submit" value="Submit">
-                            </div>
-                        </form>
-                    </td>                
-                </tr>
-            </table>
-        </div>
-    
-        <div class="form-crud--list">
-            <table class="list" id="employeeList">
-                <thead>
-                    <tr>
-                        <th>Nome Completo</th>
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                        <th>Gênero</th>
-                        <th>Status</th>
-                        <th>Data de Nascimento</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+        <form id="form-entry">
+            <input type ="text" id="form-activity" class="form-control">
+            <button type="submit">  Registrar  </button>      
+        </form>    
+        <div id="form-list">            
         </div>
     </div>
     
