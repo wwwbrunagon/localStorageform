@@ -1,7 +1,6 @@
 
 const formEntry = document.querySelector('.form-entry')
 const formList = document.querySelector('.form-list')
-
 let arr = []
 
 const CreateItem = (activity) => {    
@@ -72,5 +71,6 @@ formList.addEventListener('click', (e) => {
     if(deleteAction === 'done'){
         const listItem = e.path[1].childNodes[1].innerHTML
         RemovefromList(listItem)
-    }    
+    }
+    
   })
