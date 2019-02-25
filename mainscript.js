@@ -1,6 +1,6 @@
 
-const formEntry = document.querySelector('#form-entry')
-const formList = document.querySelector('#form-list')
+const formEntry = document.querySelector('.form-entry')
+const formList = document.querySelector('.form-list')
 let arr = []
 
 const CreateItem = (activity) => {    
@@ -16,7 +16,6 @@ const SaveItem = () => {
     localStorage.setItem('rutina', JSON.stringify(arr))
     PrintItem();
 }
-
 
 const PrintItem = () => {
     formList.innerHTML =''
