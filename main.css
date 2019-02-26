@@ -21,6 +21,10 @@ body {
           align-items: center;
 }
 
+.form-crud .userstatus, .form-crud .gender, .form-crud .birthday {
+  margin-top: 1.5rem;
+}
+
 .form-crud--list {
   height: 36rem;
 }

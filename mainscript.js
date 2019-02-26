@@ -1,42 +1,61 @@
 
 const formEntry = document.querySelector('.form-entry')
-const formList = document.querySelector('.form-list')
+const formListFullName = document.querySelector('.form-list--register')
+const formListCPF = document.querySelector('.form-list--cpf')
 
 let arr = []
 
-const CreateItem = (activity) => {    
+const CreateItem = (activity, cpf, phone, email, gender, btday, status ) => {    
     let item = {
-        activity: activity       
+        activity: activity,
+        cpf: cpf,
+        phone: phone,
+        email:email,
+        gender:gender,
+        btday: btday,
+        status: status      
     }    
     arr.push(item)    
     return item
 }
 
+const FormValue = () => {
+    let fullName = document.querySelector('#form-userName').value
+    let listCPF = document.querySelector('#form-cpf').value
+    let phoneNumber = document.querySelector('#form-phone').value
+    let usermail = document.querySelector('#form-email').value
+    let gender = document.querySelector('#form-gender').value
+    let userstatus = document.querySelector('#form-status').value
+    let birthday = document.querySelector('#form-birthday').value  
 
-const SaveItem = () => {
-    localStorage.setItem('rutina', JSON.stringify(arr))
-    PrintItem();
+    return fullName + listCPF + phoneNumber + usermail + gender + userstatus + birthday       
 }
 
 const PrintItem = () => {
-    formList.innerHTML =''
+    formListFullName.innerHTML =''     
     arr = JSON.parse(localStorage.getItem('rutina'))
-    console.log(arr)
-    
+    console.log(arr)    
     if (arr === null){
         arr =[]
-    } else{
+    } 
+    else{
         arr.forEach(el =>{
-            console.log(el)
-            formList.innerHTML += `
-            <div>
-                <b>${el.activity}</b>
-                <span> - <i class="material-icons">delete</i>
-                </span>
-            </div>`
+            if(el.activity){
+                formListFullName.innerHTML += `
+                <div>
+                    <b>${el.activity} </b>
+                    <span> - <i class="material-icons">delete</i>
+                    </span>
+                </div>`  
+            }  
         })
-    }
+    }   
 }
+const SaveItem = () => {
+    localStorage.setItem('rutina', JSON.stringify(arr))
+    PrintItem()    
+}
+
 
 const RemovefromList = (activity) => {
     console.log(activity)
@@ -52,21 +71,17 @@ const RemovefromList = (activity) => {
 }
 
 formEntry.addEventListener('submit', (e) => {
-    e.preventDefault();  
-    
-    let userActivity = document.querySelector('#form-activity').value
-    console.log(userActivity)
-    
-    CreateItem(userActivity)
+    e.preventDefault();            
+    CreateItem(FormValue())
     SaveItem();
-    formEntry.reset();
+    formEntry.reset(); 
 })
 
 document.addEventListener('DOMContentLoaded', PrintItem)
 
-formList.addEventListener('click', (e) => {
+formListFullName.addEventListener('click', (e) => {
     e.preventDefault();    
-    // console.log(e.target)
+    console.log(e.target)
     let deleteAction = e.target.innerHTML
     deleteAction = 'done'
     if(deleteAction === 'done'){
@@ -74,3 +89,6 @@ formList.addEventListener('click', (e) => {
         RemovefromList(listItem)
     }    
   })
+
+
+

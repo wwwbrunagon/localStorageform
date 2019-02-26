@@ -22,34 +22,40 @@
                     <td>        
                         <form class="form-entry">
                             <div class="username">
-                                <label>Nome Completo</label>
-                                <input type ="text" id="form-activity">
+                                <label for="nome">Nome Completo</label>
+                                <input type ="text" name="nome" id="form-userName">
                             </div>
                             <div class="cpf">
-                                <label>CPF</label>
-                                <input type="text" name="cpf" id="cpf">
+                                <label for="cpf">CPF</label>
+                                <input type="number" name="cpf" id="form-cpf">
                             </div>
                             <div class="phonenumber">
                                 <label>Telefone</label>
-                                <input type="text" name="telefone" id="telefone">
+                                <input type="number"  id="form-phone">
                             </div>
                             <div class="usermail">
                                 <label>Email</label>
-                                <input type="text" name="email" id="email">
+                                <input type="text"  id="form-email">
                             </div>
                             <div class="gender">
-                                <label>Gênero</label>
-                                <input type="text" name="email" id="email">
+                                <label for="gender">Gênero</label>
+                                <select name="gendername" id="form-gender">
+                                    <option value="fem">Feminino</option>
+                                    <option value="masc">Masculino</option>
+                                    <option value="outro">Outro</option>   
+                                </select>                                
                             </div>
                             <div class="userstatus">
                                 <label>Status</label>
-                                <input type="text" name="email" id="email">
+                                <input type="text"  id="form-status">
                             </div>
                             <div class="birthday">
                                 <label>Data de Nascimento</label>
-                                <input type="text" name="email" id="email">
+                                <input type="date" id="form-birthday">
                             </div> 
-                            <button type="submit">  Registrar  </button>    
+                            <div>
+                                <input type="submit" value="Registrar"> 
+                            </div>
                         </form>                     
                     </td>
                 </tr>
@@ -60,28 +66,18 @@
             <table class="list">
                 <thead>
                     <tr>
-                        <th>Nome Completo</th>                                            
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                        <th>Gênero</th>
-                        <th>Status</th>
-                        <th>Data de Nascimento</th>            
+                        <th>Registro</th> 
                     </tr>
                 </thead>
                 <tbody>
-                    <td><div class="form-list"></div> </td> 
-                    <td></td> 
-                    <td></td>
-                    <td></td>
-                    <td></td> 
-                    <td></td>
-                    <td></td>
+                    <td> <div class="form-list--register"> </div> </td> 
                 </tbody>
             </table>
         </div>
     </div>
-
+  
     <script src='mainscript.js'></script>   
 </body>
 </html>      
+
+

@@ -5,18 +5,22 @@
   
   body {
     margin: 0;
-   }
-  
+   }  
+   
  .hero{
     img{
         width: 100vw;
     }
  }
 
+
  .form-crud{
     display: flex;   
     justify-content: space-around;
-    align-items: center;   
+    align-items: center;  
+    .userstatus, .gender, .birthday{
+      margin-top: 1.5rem;
+    } 
  }
  .form-crud--list{
    height: 36rem;
